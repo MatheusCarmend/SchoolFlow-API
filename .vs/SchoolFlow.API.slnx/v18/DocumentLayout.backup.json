@@ -1,0 +1,111 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|c:\\users\\pichau\\source\\repos\\schoolflow.api\\controllers\\professorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|solutionrelative:controllers\\professorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|c:\\users\\pichau\\source\\repos\\schoolflow.api\\models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|solutionrelative:models\\professor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|c:\\users\\pichau\\source\\repos\\schoolflow.api\\dtos\\createprofessordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|solutionrelative:dtos\\createprofessordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|c:\\users\\pichau\\source\\repos\\schoolflow.api\\data\\schoolflowcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C072757E-5C4B-1075-BFE5-8B93E5F48225}|SchoolFlow.API.csproj|solutionrelative:data\\schoolflowcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Professor.cs",
+              "DocumentMoniker": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\Models\\Professor.cs",
+              "RelativeDocumentMoniker": "Models\\Professor.cs",
+              "ToolTip": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\Models\\Professor.cs",
+              "RelativeToolTip": "Models\\Professor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T02:37:55.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateProfessorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\DTOs\\CreateProfessorDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateProfessorDTO.cs",
+              "ToolTip": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\DTOs\\CreateProfessorDTO.cs",
+              "RelativeToolTip": "DTOs\\CreateProfessorDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T03:59:51.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfessoresController.cs",
+              "DocumentMoniker": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\Controllers\\ProfessoresController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfessoresController.cs",
+              "ToolTip": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\Controllers\\ProfessoresController.cs",
+              "RelativeToolTip": "Controllers\\ProfessoresController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T03:49:22.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SchoolFlowContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\Data\\SchoolFlowContextFactory.cs",
+              "RelativeDocumentMoniker": "Data\\SchoolFlowContextFactory.cs",
+              "ToolTip": "C:\\Users\\pichau\\source\\repos\\SchoolFlow.API\\Data\\SchoolFlowContextFactory.cs",
+              "RelativeToolTip": "Data\\SchoolFlowContextFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T02:27:01.483Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
