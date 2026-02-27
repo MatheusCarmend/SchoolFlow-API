@@ -7,6 +7,6 @@
         public string Especialidade { get; set; }
         public string Email { get; set; }
         public string Telefone { get; set; }
-        public List<Turma> Turmas { get; set; }
+        public ICollection<Turma> Turmas { get; set; } = new List<Turma>();
     }
 }

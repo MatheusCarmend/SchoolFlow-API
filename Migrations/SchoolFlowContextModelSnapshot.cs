@@ -30,6 +30,9 @@ namespace SchoolFlow.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
 
@@ -41,8 +44,9 @@ namespace SchoolFlow.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Telefone")
-                        .HasColumnType("int");
+                    b.Property<string>("Telefone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TurmaId")
                         .HasColumnType("int");
@@ -91,11 +95,17 @@ namespace SchoolFlow.API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Nivel")
+                    b.Property<int>("Ano")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Ativa")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Periodo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -107,6 +117,38 @@ namespace SchoolFlow.API.Migrations
                     b.HasIndex("ProfessorId");
 
                     b.ToTable("Turmas");
+                });
+
+            modelBuilder.Entity("SchoolFlow.API.Models.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SenhaHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("SchoolFlow.API.Models.Aluno", b =>
@@ -125,7 +167,7 @@ namespace SchoolFlow.API.Migrations
                     b.HasOne("SchoolFlow.API.Models.Professor", "Professor")
                         .WithMany("Turmas")
                         .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Professor");

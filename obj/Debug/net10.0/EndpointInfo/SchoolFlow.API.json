@@ -5,6 +5,157 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Alunos": {
+      "get": {
+        "tags": [
+          "Alunos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Alunos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAlunoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAlunoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateAlunoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alunos/inativos": {
+      "get": {
+        "tags": [
+          "Alunos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alunos/{id}": {
+      "get": {
+        "tags": [
+          "Alunos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Alunos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Alunos/{id}/reativar": {
+      "patch": {
+        "tags": [
+          "Alunos"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Professores": {
       "get": {
         "tags": [
@@ -12,33 +163,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Professor"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Professor"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Professor"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -90,24 +215,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Professor"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Professor"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Professor"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
@@ -172,126 +280,257 @@
           }
         }
       }
+    },
+    "/api/Turmas": {
+      "get": {
+        "tags": [
+          "Turmas"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Turmas"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTurmaDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTurmaDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTurmaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Turmas/{id}": {
+      "get": {
+        "tags": [
+          "Turmas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Turmas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTurmaDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTurmaDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTurmaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Turmas"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "Aluno": {
+      "CreateAlunoDto": {
+        "required": [
+          "email",
+          "nome",
+          "turmaId"
+        ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nome": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "email": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
-          },
-          "telefone": {
-            "type": "integer",
-            "format": "int32"
+            "format": "email"
           },
           "dataNascimento": {
             "type": "string",
             "format": "date-time"
           },
+          "telefone": {
+            "type": "string",
+            "nullable": true
+          },
           "turmaId": {
             "type": "integer",
             "format": "int32"
-          },
-          "turma": {
-            "$ref": "#/components/schemas/Turma"
           }
         },
         "additionalProperties": false
       },
       "CreateProfessorDto": {
+        "required": [
+          "email",
+          "especialidade",
+          "nome",
+          "telefone"
+        ],
         "type": "object",
         "properties": {
           "nome": {
-            "type": "string",
-            "nullable": true
+            "minLength": 3,
+            "type": "string"
           },
           "especialidade": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "email": {
+            "minLength": 1,
             "type": "string",
-            "nullable": true
+            "format": "email"
           },
           "telefone": {
-            "type": "string",
-            "nullable": true
+            "minLength": 8,
+            "type": "string"
           }
         },
         "additionalProperties": false
       },
-      "Professor": {
+      "CreateTurmaDto": {
+        "required": [
+          "nome",
+          "professorId"
+        ],
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nome": {
-            "type": "string",
-            "nullable": true
-          },
-          "especialidade": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "telefone": {
-            "type": "string",
-            "nullable": true
-          },
-          "turmas": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Turma"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "Turma": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nome": {
-            "type": "string",
-            "nullable": true
-          },
-          "nivel": {
-            "type": "string",
-            "nullable": true
+            "minLength": 3,
+            "type": "string"
           },
           "professorId": {
             "type": "integer",
             "format": "int32"
           },
-          "professor": {
-            "$ref": "#/components/schemas/Professor"
+          "ano": {
+            "type": "integer",
+            "format": "int32"
           },
-          "alunos": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Aluno"
-            },
+          "periodo": {
+            "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateTurmaDto": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "ano": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "periodo": {
+            "type": "string",
+            "nullable": true
+          },
+          "ativa": {
+            "type": "boolean"
+          },
+          "professorId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -300,7 +539,16 @@
   },
   "tags": [
     {
+      "name": "Alunos"
+    },
+    {
+      "name": "Auth"
+    },
+    {
       "name": "Professores"
+    },
+    {
+      "name": "Turmas"
     }
   ]
 }

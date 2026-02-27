@@ -1,5 +1,105 @@
 [
   {
+    "ContainingType": "SchoolFlow.API.Controllers.AlunosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Alunos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.AlunosController",
+    "Method": "Create",
+    "RelativePath": "api/Alunos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SchoolFlow.API.DTOs.CreateAlunoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.AlunosController",
+    "Method": "GetById",
+    "RelativePath": "api/Alunos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.AlunosController",
+    "Method": "Deactivate",
+    "RelativePath": "api/Alunos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.AlunosController",
+    "Method": "Reativar",
+    "RelativePath": "api/Alunos/{id}/reativar",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.AlunosController",
+    "Method": "GetInativos",
+    "RelativePath": "api/Alunos/inativos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SchoolFlow.API.DTOs.Auth.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SchoolFlow.API.Controllers.ProfessoresController",
     "Method": "GetProfessores",
     "RelativePath": "api/Professores",
@@ -7,17 +107,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[SchoolFlow.API.Models.Professor, SchoolFlow.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SchoolFlow.API.Controllers.ProfessoresController",
@@ -49,17 +139,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "SchoolFlow.API.Models.Professor",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SchoolFlow.API.Controllers.ProfessoresController",
@@ -86,6 +166,85 @@
     "ContainingType": "SchoolFlow.API.Controllers.ProfessoresController",
     "Method": "DeleteProfessor",
     "RelativePath": "api/Professores/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.TurmasController",
+    "Method": "Get",
+    "RelativePath": "api/Turmas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.TurmasController",
+    "Method": "Create",
+    "RelativePath": "api/Turmas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SchoolFlow.API.DTOs.CreateTurmaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.TurmasController",
+    "Method": "GetById",
+    "RelativePath": "api/Turmas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.TurmasController",
+    "Method": "Update",
+    "RelativePath": "api/Turmas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "SchoolFlow.API.DTOs.UpdateTurmaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SchoolFlow.API.Controllers.TurmasController",
+    "Method": "Delete",
+    "RelativePath": "api/Turmas/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

@@ -161,10 +161,12 @@ C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\staticwebassets.bu
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\SchoolFl.D4390776.Up2Date
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\SchoolFlow.API.dll
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\refint\SchoolFlow.API.dll
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\SchoolFlow.API.pdb
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\SchoolFlow.API.genruntimeconfig.cache
 C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\ref\SchoolFlow.API.dll
+C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\SchoolFlow.API.sourcelink.json
+C:\Users\pichau\source\repos\SchoolFlow.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\pichau\source\repos\SchoolFlow.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

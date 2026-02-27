@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SchoolFlow.API.Data;
 using SchoolFlow.API.DTOs;
 using SchoolFlow.API.Models;
+using SchoolFlow.API.Responses;
+using SchoolFlow.API.Services;
 
 namespace SchoolFlow.API.Controllers
 {
@@ -10,71 +10,61 @@ namespace SchoolFlow.API.Controllers
     [Route("api/[controller]")]
     public class ProfessoresController : ControllerBase
     {
-        private readonly SchoolFlowContext _context;
+        private readonly IProfessorService _service;
 
-        public ProfessoresController(SchoolFlowContext context)
+        public ProfessoresController(IProfessorService service)
         {
-            _context = context;
+            _service = service;
         }
+
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Professor>>> GetProfessores()
+        public async Task<IActionResult> GetProfessores()
         {
-            return await _context.Professores.ToListAsync();
+            var professores = await _service.GetAllAsync();
+            return Ok(new ApiResponse<IEnumerable<Professor>>(true, "Lista de professores", professores));
         }
+
         [HttpGet("{id}")]
-        public async Task<ActionResult<Professor>> GetProfessor(int id)
+        public async Task<IActionResult> GetProfessor(int id)
         {
-            var professor = await _context.Professores.FindAsync(id);
-
+            var professor = await _service.GetByIdAsync(id);
             if (professor == null)
-                return NotFound();
+                return NotFound(new ApiResponse<object>(false, "Professor não encontrado", null));
 
-            return professor;
+            return Ok(new ApiResponse<Professor>(true, "Professor encontrado", professor));
         }
+
         [HttpPost]
-        public async Task<IActionResult> PostProfessor(CreateProfessorDto dto)
+        public async Task<IActionResult> PostProfessor([FromBody] CreateProfessorDto dto)
         {
-            var professor = new Professor
-            {
-                Nome = dto.Nome,
-                Especialidade = dto.Especialidade,
-                Email = dto.Email,
-                Telefone = dto.Telefone
-            };
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            _context.Professores.Add(professor);
-            await _context.SaveChangesAsync();
+            var professor = await _service.CreateAsync(dto);
 
-            return CreatedAtAction(nameof(GetProfessor), new { id = professor.Id }, professor);
+            return CreatedAtAction(nameof(GetProfessor),
+                new { id = professor.Id },
+                new ApiResponse<Professor>(true, "Professor criado com sucesso", professor));
         }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProfessor(int id, CreateProfessorDto dto)
         {
-            var professor = await _context.Professores.FindAsync(id);
-            if (professor == null)
-                return NotFound();
+            var updated = await _service.UpdateAsync(id, dto);
+            if (!updated)
+                return NotFound(new ApiResponse<object>(false, "Professor não encontrado", null));
 
-            professor.Nome = dto.Nome;
-            professor.Email = dto.Email;
-            professor.Especialidade = dto.Especialidade;
-            professor.Telefone = dto.Telefone;
-
-            await _context.SaveChangesAsync();
             return NoContent();
         }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProfessor(int id)
         {
-            var professor = await _context.Professores.FindAsync(id);
-            if (professor == null)
-                return NotFound();
-
-            _context.Professores.Remove(professor);
-            await _context.SaveChangesAsync();
+            var deleted = await _service.DeleteAsync(id);
+            if (!deleted)
+                return NotFound(new ApiResponse<object>(false, "Professor não encontrado", null));
 
             return NoContent();
         }
-
-
     }
 }
