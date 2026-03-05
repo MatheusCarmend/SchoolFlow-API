@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolFlow.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c614f4cdb0adca71b151fbc30b7b74aabe64e8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a5bba65e97a5d040a41bfac3630d321aea66c4e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolFlow.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolFlow.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
